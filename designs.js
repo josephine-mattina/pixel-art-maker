@@ -6,10 +6,10 @@ const grid = document.querySelector('#pixelCanvas')
 // Select color input
 const currentColor = document.querySelector('#colorPicker');
 
-//Color cells - ROB LOOK AT THIS FUNCTION PLEASE!! 
+//Color cells
 function colorCellsOnClick() {
-  var td = this; //Using 'this' refers to the thing that the event happend to. Took me ages to find :)
-    td.style.backgroundColor = randomColor(); // currentColor.value;
+ 	const td = this; //Using 'this' refers to the thing that the event happend to. Took me ages to find :)
+ 	td.style.backgroundColor = currentColor.value; // currentColor.value or randomColor()
   }
 
 // Select size input
@@ -33,7 +33,7 @@ function makeGrid(event) {
 		for (let c = 1; c <= cols.value; c++) {
 			const cell = document.createElement('td');
 			row.appendChild(cell);
-      		cell.onclick = colorCellsOnClick; //Adding onclick here made it all much easier https://www.w3schools.com/jsref/event_onclick.asp . Could also have used eventlistener
+      		cell.onclick = colorCellsOnClick; //Adding onclick here made it all much easier https://www.w3schools.com/jsref/event_onclick.asp . Could also have used eventListener
 		}
 		gridBody.appendChild(row);
 	}
@@ -41,13 +41,13 @@ function makeGrid(event) {
 	event.preventDefault();
 }
 
+//Pointless but a fun addition
 function randomColor() {
-	//Pointless but a fun addition
-    var randomRed = Math.floor(Math.random() * 255);
-    var randomGreen = Math.floor(Math.random() * 255);
-    var randomBlue = Math.floor(Math.random() * 255);
+    const randomRed = Math.floor(Math.random() * 255);
+    const randomGreen = Math.floor(Math.random() * 255);
+    const randomBlue = Math.floor(Math.random() * 255);
     //create the string that is the ‘random color’
-    var randomColor = "rgb("+randomRed+","+randomGreen+","+randomBlue+")";
+    const randomColor = "rgb("+randomRed+","+randomGreen+","+randomBlue+")";
 
     return randomColor;
 }
