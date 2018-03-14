@@ -1,25 +1,67 @@
+* {
+margin: 0;
+padding: 0;
+}
+
 body {
     text-align: center;
 }
+header {
+    background-color: #ef1f6b;
+}
 
 h1 {
-    font-family: Monoton;
-    font-size: 30px;
-    margin: 0.2em;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    padding: 1em;
+    margin-bottom: 0.8em;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #595959;
+    letter-spacing: 0.03em;
+    margin: 1.5em 0 0.25em;
+    padding: 0.3em;
 }
 
 h2:first-of-type {
     margin-top: 0.5em;
 }
 
+#sizePicker {
+    font-family: "PT Sans", sans-serif;
+    font-size: 0.8em;
+}
+
+.button {
+    border: none;
+    padding: 0.7em;
+    background-color: #38c4c4;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #38c465;
+}
+
+/*.button:focus {
+    background-color: #38c465;
+    outline: 0;
+}*/
+
 table,
 tr,
 td {
-    border: 1px solid black;
+    border: 1px solid #d1d2d3;
 }
 
 table {
@@ -28,14 +70,31 @@ table {
 }
 
 tr {
-    height: 20px;
+    height: 30px;
 }
 
 td {
-    width: 20px;
+    width: 30px;
 }
 
 input[type=number] {
-    width: 6em;
+    width: 4em;
+    padding: 0.8em;
+    margin: 0 0.5em;
+    font-size: 10px;
+    text-align: center;
+
+}
+input[type=number]:focus {
+    outline: 0;
+    background-color: #c2eaea;
+    border-style: solid;
+    border-color: #c2eaea;
+}
+
+input[type=color] {
+    border: none;
+    padding: none;
+    height: 4em;
 }
 
